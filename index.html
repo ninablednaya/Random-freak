@@ -5,124 +5,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DOLLHOUSE OF FATE</title>
-<style>
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #10080c;
-  color: #ead5d8;
-  font-family: Georgia, serif;
-  text-align: center;
-}
-.box {
-  width: 90%;
-  max-width: 420px;
-  padding: 22px;
-  border: 1px solid #843b49;
-  background: #190b10;
-  box-sizing: border-box;
-}
-h1 {
-  font-size: 25px;
-  letter-spacing: 2px;
-}
-.subtitle {
-  color: #bd8790;
-  font-size: 11px;
-  letter-spacing: 2px;
-  margin: 15px 0 25px;
-}
-img {
-  display: block;
-  width: 100%;
-  max-width: 320px;
-  margin: 15px auto;
-  border: 1px solid #843b49;
-}
-button {
-  margin-top: 20px;
-  padding: 14px 22px;
-  color: #f0dadd;
-  background: linear-gradient(135deg, #8d3444, #42121d);
-  border: 1px solid #bd6472;
-  font-family: Georgia, serif;
-  letter-spacing: 2px;
-  cursor: pointer;
-}
-#name {
-  color: #bd8790;
-  letter-spacing: 2px;
-  margin-top: 15px;
-}
-</style>
 </head>
 <body>
 
-<div class="box">
-  <h1>DOLLHOUSE OF FATE</h1>
-  <div class="subtitle">✦ A LITTLE GAME OF DESTINY ✦</div>
-
-  <div>THE SOUL</div>
-
-  <img id="portrait"
-  src="https://i.ibb.co/d04rsWwq/Nj-YXvx-V-9am-UWWB-JFk-RS.webp"
-  alt="Holylight">
-
-  <div id="name">HOLYLIGHT</div>
-
-  <button id="pull">✦ PULL THE THREAD ✦</button>
-
-  <div class="subtitle">SIX DOLLS · ONE DESTINY</div>
-</div>
-
 <script>
 const characters = [
-  {
-    name: "HOLYLIGHT",
-    image: "https://i.ibb.co/d04rsWwq/Nj-YXvx-V-9am-UWWB-JFk-RS.webp"
-  },
-  {
-    name: "DR. MωBIUS",
-    image: "https://i.ibb.co/VYXTq31V/Hr-x-Qaea-W8-MGca-Z2-Qf-y-F.webp"
-  },
-  {
-    name: "MICHAEL",
-    image: "https://i.ibb.co/bjDwN974/4y2u-R2-Uu5pu59xzjad-Xhj.webp"
-  },
-  {
-    name: "MARS-07",
-    image: "https://i.ibb.co/5hZnNYpm/4-Hdj-CU1-PEo-ZSZO5e-Rx-YXq.webp"
-  },
-  {
-    name: "BELLE",
-    image: "https://i.ibb.co/ksYGz4Jq/x8-CICby-C8xabvf-Yq-2-ZE4.webp"
-  },
-  {
-    name: "UNICORN PRINCE",
-    image: "https://i.ibb.co/JRWC9dwp/Ua-SZJz-Eb-G2-wfh8-D8-Gx9-U.webp"
-  }
+  "https://janitorai.com/characters/500a555c-96ae-452c-a3fd-4bbdde37536b_character-holylight",
+  "https://janitorai.com/characters/2d84893e-e263-4870-acb2-527f88b69f43_character-dr-m%CF%89bius",
+  "https://janitorai.com/characters/96525c6a-4117-4304-87e6-76e5c7edd850_character-michael-court-mage",
+  "https://janitorai.com/characters/86423161-49b3-47d7-91d4-9a8d8a2da7f6_character-mars-07-android-postman-at-your-service",
+  "https://janitorai.com/characters/ffe10317-6a6a-4b29-8e62-a00b6cd38bf1_character-belle-obsessed-princess",
+  "https://janitorai.com/characters/91fad551-83da-48ff-bae4-f58b07f4d341_character-unicorn-prince-in-the-dorm-ramiel"
 ];
 
-let previous = -1;
+const randomIndex = Math.floor(Math.random() * characters.length);
 
-document.getElementById("pull").addEventListener("click", () => {
-  let index;
-
-  do {
-    index = Math.floor(Math.random() * characters.length);
-  } while (index === previous);
-
-  previous = index;
-
-  const chosen = characters[index];
-
-  document.getElementById("portrait").src = chosen.image;
-  document.getElementById("portrait").alt = chosen.name;
-  document.getElementById("name").textContent = chosen.name;
-});
+window.location.replace(characters[randomIndex]);
 </script>
 
 </body>
